@@ -15,9 +15,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   axios.get(`https://newsapi.org/v2/top-headlines?sources=the-verge&apiKey=${apiKey}`)
-    .then(({test}) => {
-      console.log(test.data.articles[0].title)
-      const articleTitle = test.data.articles[0].title;  
+    .then(({data}) => {
+      console.log(data.articles[0].title)
+      const articleTitle = data.articles[0].title;  
       res.render('home.ejs', {articleTitle});  
   })
   .catch(err => {
