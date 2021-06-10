@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.main-container {
+  max-width: 75vw;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+}
+
+h1 {
+  color: white;
+}
+
+h3 {
+  font-family: "Arial-narrow", Helvetica, sans-serif;
+}
+
+.headline-box {
+  box-sizing: border-box;
+  margin: 3px;
+  max-height: 500px;
+  max-width: 500px;
+}
+
+img {
+  max-height: 500px;
+  max-width: 500px;
+}
