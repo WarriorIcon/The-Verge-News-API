@@ -34,6 +34,7 @@ a {
 
 .author {
   color:#e2127A;
+  font-size: 1rem;
 }
 
 .author:hover {
@@ -54,6 +55,7 @@ a {
 .by {
   font-family: Oswald;
   padding-left: 1rem;
+  font-size: 1rem;
 }
 
 h1 {
