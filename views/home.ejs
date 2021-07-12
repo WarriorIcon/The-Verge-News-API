@@ -13,7 +13,7 @@
     <% for (let [i, article] of articleData.entries()) {%>
     <div class="headline-box">  
       <img src="<%=articleData[i].urlToImage%>" alt="">
-      <h3> <%=articleData[i].title%> </h3>
+      <h3> <a href="<%=articleData[i].url %> "><%=articleData[i].title%></a> </h3>
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
       <h3>by <a href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a></h3>
     </div>
