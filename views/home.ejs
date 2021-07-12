@@ -14,6 +14,8 @@
     <div class="headline-box">  
       <img src="<%=articleData[i].urlToImage%>" alt="">
       <h3> <%=articleData[i].title%> </h3>
+      <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
+      <h3>by <a href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a></h3>
     </div>
 <% } %> 
   </div>  
