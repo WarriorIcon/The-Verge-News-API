@@ -18,6 +18,10 @@ body {
   background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   color: white;
 }
@@ -38,6 +42,7 @@ img {
   max-width: 500px;
 }
 
+/* //doesn't work
 .nav-link.dropdown-toggle {
   color: #FFF;
-}
+} */

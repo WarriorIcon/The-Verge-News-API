@@ -44,6 +44,10 @@ app.get('/', (req, res) => {
   res.render('home.ejs');
 }) 
 
+//Doesn't work with node. Document is not defined:
+const navbarStyle = document.getElementsByClassName("nav-link dropdown-toggle") 
+navbarStyle.append("style="color:#FFF"")
+
 const port = 3000
 app.listen(port, () => {
   console.log(`serving on port ${port}!`)
