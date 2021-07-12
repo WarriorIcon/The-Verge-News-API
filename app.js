@@ -28,25 +28,26 @@ app.get('/', (req, res) => {
   }) 
 }) 
 
+/*
+const getApiData = async () => {
+  const articles = await axios.get(`https://newsapi.org/v2/top-headlines?sources=the-verge&apiKey=${apiKey}`)
+  console.log(articles.data.articles)
+  const newLI = document.createElement('LI');
+  newLI.append(articles)
+  list.append(newLI)
 
-// const getApiData = async () => {
-//   const articles = await axios.get(`https://newsapi.org/v2/top-headlines?sources=the-verge&apiKey=${apiKey}`)
-//   console.log(articles.data.articles)
-//   const newLI = document.createElement('LI');
-//   newLI.append(articles)
-//   list.append(newLI)
+}
 
-// }
-
-// getApiData()
+getApiData()
+*/
 
 app.get('/', (req, res) => {
   res.render('home.ejs');
 }) 
 
-//Doesn't work with node. Document is not defined:
-const navbarStyle = document.getElementsByClassName("nav-link dropdown-toggle") 
-navbarStyle.append("style="color:#FFF"")
+
+// const navbarStyle = document.getElementsByClassName("nav-link dropdown-toggle") 
+// // navbarStyle.append("style='color: #FFF'")
 
 const port = 3000
 app.listen(port, () => {

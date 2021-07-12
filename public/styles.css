@@ -1,6 +1,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: "Arial Narrow", Arial, sans-serif;
+  font-family: "Heroic", "Oswald", "Arial Narrow", Arial, sans-serif;
+  color: #FFF;
 }
 
 body {
@@ -18,8 +19,41 @@ body {
   background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
 }
 
+/*should set this to take up 1 fraction of 3 of the container */
+.headline-box {
+  box-sizing: border-box;
+  margin: 3px;
+  max-height: 500px;
+  max-width: 500px;
+  background-color: black;
+}
+
 a {
   text-decoration: none;
+}
+
+.author {
+  color:#e2127A;
+}
+
+.author:hover {
+  color:#B30E61;
+}
+
+.title {
+  display: flex;
+  color: #FFF;
+  padding-left:1rem;
+  padding-right:1rem;
+}
+
+.title:hover {
+  color:#B30E61;
+}
+
+.by {
+  font-family: Oswald;
+  padding-left: 1rem;
 }
 
 h1 {
@@ -28,13 +62,6 @@ h1 {
 
 h3 {
   font-family: "Arial-narrow", Helvetica, sans-serif;
-}
-
-.headline-box {
-  box-sizing: border-box;
-  margin: 3px;
-  max-height: 500px;
-  max-width: 500px;
 }
 
 img {
