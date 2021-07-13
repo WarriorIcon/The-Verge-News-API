@@ -9,8 +9,6 @@ const date = "dddd, MMMM D, YYYY"; // this is just an example of storing a date 
 app.locals.moment = moment; // this makes moment available as a variable in every EJS page
 app.locals.date = date;
 
-const now = moment().format('dddd, MMMM D, YYYY')
-
 //set the directory for all templating engine files (ejs)
 
 app.set('view engine', 'ejs');
