@@ -13,19 +13,24 @@ body {
 }
 
 .main-container {
-  max-width: 75vw;
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1300px;
   background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  padding: 3px;
 }
 
 /*should set this to take up 1 fraction of 3 of the container */
 .headline-box {
   box-sizing: border-box;
-  margin: 3px;
-  max-height: 500px;
-  max-width: 500px;
   background-color: black;
+}
+
+img.article-image {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 a {
@@ -65,12 +70,6 @@ h1 {
 h3 {
   font-family: "Arial-narrow", Helvetica, sans-serif;
 }
-
-img.article-image {
-  max-height: 500px;
-  max-width: 500px;
-}
-
 
 img.banner {
   width: 100%;

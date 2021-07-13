@@ -18,8 +18,6 @@ app.get('/', (req, res) => {
     .then(({data}) => {
       // console.log(data.articles[0].title)
       const articleData = data.articles;
-      console.log(articleData[0].title)
-      console.log(articleData[2].urlToImage)
       res.render('home.ejs', {articleData});  
   })
   .catch(err => {
@@ -28,18 +26,6 @@ app.get('/', (req, res) => {
   }) 
 }) 
 
-/*
-const getApiData = async () => {
-  const articles = await axios.get(`https://newsapi.org/v2/top-headlines?sources=the-verge&apiKey=${apiKey}`)
-  console.log(articles.data.articles)
-  const newLI = document.createElement('LI');
-  newLI.append(articles)
-  list.append(newLI)
-
-}
-
-getApiData()
-*/
 
 app.get('/', (req, res) => {
   res.render('home.ejs');
