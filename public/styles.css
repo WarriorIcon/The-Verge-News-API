@@ -160,16 +160,23 @@ ul.horizontal-bullets {
   display: inline-block;
   text-align:center;
 }
+*/
 
-ul.horizontal-bullets li {
-  display: inline;
-} */
+/* ul.horizontal-bullets li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}  */
 
 footer {
   display: flex;
   flex-direction: columns;
+  justify-content: center;
+  align-items: center;
   font-family: Helvetica;
-  font-size: .9rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: .85rem;
   max-width: 1300px;
 }
 
@@ -179,15 +186,20 @@ footer-container {
 
 /* It was quite suprising to discover there wasn't a straight forward way to make a horizontal bullet list */
 footer ul li { 
-  list-style: none; display: inline;
-  margin: .5em;
-  
+  list-style: none; 
+  display: inline;
+  white-space: pre;
+  margin: .3em;  
 }
-footer ul li:before { 
-  content: " \2022\ "; 
+
+/* unicode for spaces and bullet */
+footer ul li:not(:last-child):after { 
+  content: " \00a0\2022";  
+} 
+/* \00a0" */
+
+.footer-ul-wrapper {
+  max-width: 50%;
+
 }
-footer ul li:last-child:after { 
-  content: none; 
-}
-/**/
 

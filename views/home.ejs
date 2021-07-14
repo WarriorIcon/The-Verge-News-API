@@ -114,13 +114,17 @@
 
   <div class="main-container">    
     <% for (let [i, article] of articleData.entries()) {%>
+      <%if (i < 9) { %> 
     <div class="headline-box">  
       <img class="article-image" src="<%=articleData[i].urlToImage%>" alt="">
       <h3> <a class="title" href="<%=articleData[i].url %> "><%=articleData[i].title.toUpperCase()%></a> </h3>
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
       <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
-    </div>
+    </div> <%}%>
 <% } %> 
+    <div class="10th-article-container">
+      
+    </div>
   </div>  
 
   <%- include('./partials/footer.ejs') %>
