@@ -19,8 +19,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 3px;
   padding: 3px;
-  
 }
+
+.last-article-container {
+  /* width: 1300px; */
+  background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+}
+
 
 /*should set this to take up 1 fraction of 3 of the container */
 .headline-box {
@@ -203,3 +208,12 @@ footer ul li:not(:last-child):after {
 
 }
 
+.title-10 {
+  display: flex;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+  padding-left:1rem;
+  padding-right:1rem;
+  font-family: "Helvetica", "Arial", "Arial Narrow", Arial, sans-serif;
+}
