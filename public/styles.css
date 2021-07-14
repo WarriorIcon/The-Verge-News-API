@@ -138,7 +138,7 @@ h3 {
 }
 
 footer svg {
-  width: 50%;
+  width: 10%;
 }
 
 footer a {
@@ -166,18 +166,28 @@ ul.horizontal-bullets li {
 } */
 
 footer {
+  display: flex;
+  flex-direction: columns;
   font-family: Helvetica;
   font-size: .9rem;
+  max-width: 1300px;
+}
+
+footer-container {
+  max-width: 1300px;
 }
 
 /* It was quite suprising to discover there wasn't a straight forward way to make a horizontal bullet list */
-ul li { 
-  list-style: none; display: inline; 
+footer ul li { 
+  list-style: none; display: inline;
+  margin: .5em;
+  
 }
-ul li:after { 
-  content: " \00b7"; 
+footer ul li:before { 
+  content: " \2022\ "; 
 }
-ul li:last-child:after { 
+footer ul li:last-child:after { 
   content: none; 
 }
 /**/
+
