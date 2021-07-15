@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <title>The Verge Replica - News API</title>
@@ -115,13 +115,23 @@
   <div class="main-container">
      <% for (let [i, article] of articleData.entries()) {%>
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
+      <%if (i < 9) { %> 
       <div class="headline-box">
         <img class="article-image" src="<%=articleData[i].urlToImage%>" alt="">
         <h3><a class="title" href="<%=articleData[i].url %> "><%=articleData[i].title.toUpperCase()%></a> </h3>
         <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
+      </div>
+        <%} else { %>
+        <div class="last-article-container">
+          <h3> <a class="title-10" href="<%=articleData[i].url %> "><%=articleData[i].title%></a> </h3>
+          <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
         </div>
+      </div>
+      <%}%>
   <% } %> 
 </div> 
+
+
 <!-- loop again to get 10th article? -->
  
 

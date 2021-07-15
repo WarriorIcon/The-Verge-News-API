@@ -40,13 +40,17 @@ body {
 .last-article-container {
   /* width: 1300px; */
   background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20rem;
 }
 
 
 img.article-image {
   object-fit: cover;
   max-width: 100%;
-  max-height: 100%;\
+  max-height: 100%;
 }
 
 a {
@@ -63,9 +67,14 @@ a {
   color:#B30E61;
 }
 
+.last-article-container .author {
+  color: black;
+}
+
 .title {
   display: flex;
   color: #FFF;
+  padding-top: 1rem;
   padding-left:1rem;
   padding-right:1rem;
   font-family: "Heroic", "Oswald", "Arial Narrow", Arial, sans-serif;
@@ -226,4 +235,9 @@ footer ul li:not(:last-child):after {
   padding-left:1rem;
   padding-right:1rem;
   font-family: "Helvetica", "Arial", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Not sure why I need to use !important here, but the Bootstrap nav colors wont get overriden otherwise... */
+.nav-link {
+  color: white  !important;
 }
