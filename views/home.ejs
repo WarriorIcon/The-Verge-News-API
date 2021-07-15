@@ -112,24 +112,16 @@
     </div>
   </nav>
 
-  <div class="main-container">    
-    <% for (let [i, article] of articleData.entries()) {%>
+  <div class="main-container">
+     <% for (let [i, article] of articleData.entries()) {%>
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
-      <%if (i < 9) { %> 
-    <div class="headline-box">  
-      <img class="article-image" src="<%=articleData[i].urlToImage%>" alt="">
-      <h3><a class="title" href="<%=articleData[i].url %> "><%=articleData[i].title.toUpperCase()%></a> </h3>
-      <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
-      </div> 
-    <%} else { %>
-      <div class="last-article-container">
-      <h3> <a class="title-10" href="<%=articleData[i].url %> "><%=articleData[i].title%></a> </h3>
-      <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
-      </div>
-    </div>
-    <%}%>
-<% } %> 
-
+      <div class="headline-box">
+        <img class="article-image" src="<%=articleData[i].urlToImage%>" alt="">
+        <h3><a class="title" href="<%=articleData[i].url %> "><%=articleData[i].title.toUpperCase()%></a> </h3>
+        <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
+        </div>
+  <% } %> 
+</div> 
 <!-- loop again to get 10th article? -->
  
 
