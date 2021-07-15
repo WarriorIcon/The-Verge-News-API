@@ -118,16 +118,16 @@
       <%if (i < 9) { %> 
       <div class="headline-box">
         <img class="article-image" src="<%=articleData[i].urlToImage%>" alt="">
-        <h3><a class="title" href="<%=articleData[i].url %> "><%=articleData[i].title.toUpperCase()%></a></h3>
+        <h3 class="title"><a href="<%=articleData[i].url %> "><%=articleData[i].title.toUpperCase()%></a></h3>
         <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
       </div>
         <%} else { %>
         <div class="last-article-container">
           <div class="last-art-wrapper-1">
             <h3> <a class="title-10" href="<%=articleData[i].url %> "><%=articleData[i].title%></a> </h3>
-            <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
+            <h3> <span class="by">BY</span> <a class="author-last" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
         </div>
-          <p class="funnyline">A FUNNY ARTICLE-RELATED TAGLINE COULD GO HERE!</p>        
+         <p class="funnyline"><a href="#">A FUNNY ARTICLE-RELATED TAGLINE COULD GO HERE!</a></p>       
         </div>
       </div>
       <%}%>
