@@ -30,12 +30,14 @@ body {
   max-width: 1300px;
   background-color: white;
   width: 100%;
+  margin: 1em;
 }
 
 .compact-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 70%;
+  margin: 1em auto;
 }
 
 .compact-img {
@@ -43,6 +45,8 @@ body {
 }
 
 .compact-body {
+  display: flex;
+  
 
 }
 
@@ -57,7 +61,6 @@ body {
 
 .title-compact {
   display: flex;
-  text-align: right;
   color: #000;
   font-weight: 600;
   padding-left:1rem;
@@ -307,4 +310,12 @@ footer ul li:not(:last-child):after {
 /* Not sure why I need to use !important here, but the Bootstrap nav colors wont get overriden otherwise... */
 .nav-link {
   color: white  !important;
+}
+
+.nav-link:hover {
+  color: green  !important;
+}
+
+.dropdown-toggle::after  {
+  color:#e2127A;
 }
