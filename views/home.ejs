@@ -148,14 +148,19 @@
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
     <div class="compact-body">
       <img class="compact-img" src="<%=articleData[i].urlToImage%>" alt="">
-      <h3><a class="title-compact" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></h3>
-      <% if (articleData[i].author.indexOf(',') < 1) { %>
-      <h3> <span class="by-compact">By</span> <a class="author-compact" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a></h3>
-      <% } else { %>
-        <h3><span class="by-compact">By</span> <a class="author-compact" href="#">THE VERGE STAFF</a></h3>
-        <% } %>
-      <p>happy days</p>      
+      <div class="compact-wrapper">
+        <h3><a class="title-compact" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></h3>
+        <% if (articleData[i].author.indexOf(',') < 1) { %>
+          <h3> <span class="by-compact">By</span> <a class="author-compact" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a></h3>
+          <% } else { %>
+            <div class="compact-wrapper">
+              <h3><span class="by-compact">By</span> <a class="author-compact" href="#">THE VERGE STAFF</a></h3>
+            </div>
+            <% } %>  
+      </div>
     </div>
+    
+    
     <%}%>
   </div>
 </div>

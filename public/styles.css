@@ -30,7 +30,6 @@ body {
   max-width: 1300px;
   background-color: white;
   width: 100%;
-  margin: 1em;
 }
 
 .compact-container {
@@ -47,12 +46,10 @@ body {
 .compact-body {
   display: flex;
   
-
 }
 
 .author-compact {
-  color: black;
-  font-size: .5rem;
+  font-size: 1rem;
   font-weight: 300;
   font-family: "Helvetica", "Arial Narrow", Arial, sans-serif;
   letter-spacing: .1em;
@@ -69,9 +66,15 @@ body {
 }
 
 img.compact {
+  display: inline-block;
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
+}
+
+.compact-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .by-compact {
@@ -281,6 +284,7 @@ footer {
   padding-bottom: 5rem;
   font-size: .85rem;
   max-width: 1300px;
+  margin: 1em;
 }
 
 footer-container {
