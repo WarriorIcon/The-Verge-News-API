@@ -45,6 +45,7 @@ body {
 
 .compact-body {
   display: flex;
+  border-top: 1px solid #e7e7e8;
   
 }
 
@@ -317,9 +318,13 @@ footer ul li:not(:last-child):after {
 }
 
 .nav-link:hover {
-  color: green  !important;
+  color: #fcfcfccb  !important;
 }
 
 .dropdown-toggle::after  {
   color:#e2127A;
+}
+
+.dropdown-menu-dark.show {
+  background-color: black ;
 }
