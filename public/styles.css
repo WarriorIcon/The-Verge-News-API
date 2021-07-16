@@ -30,6 +30,7 @@ body {
   max-width: 1300px;
   background-color: white;
   width: 100%;
+  justify-content: space-evenly;
 }
 
 .compact-container {
@@ -39,21 +40,27 @@ body {
   margin: 1em auto;
 }
 
+.video-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  
+}
+
 .compact-img {
-  width: 40%;
+  width: 25%;
 }
 
 .compact-body {
   display: flex;
   border-top: 1px solid #e7e7e8;
-  
+  margin-bottom: .5em;  
 }
 
 .author-compact {
-  font-size: 1rem;
+  font-size: .90rem;
   font-weight: 300;
   font-family: "Helvetica", "Arial Narrow", Arial, sans-serif;
-  letter-spacing: .1em;
   color: #e2127A;
 }
 
@@ -73,6 +80,10 @@ img.compact {
   max-height: 100%;
 }
 
+p {
+  margin: 0;
+}
+
 .compact-wrapper {
   display: flex;
   flex-direction: column;
@@ -81,7 +92,7 @@ img.compact {
 .by-compact {
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 1rem;
-  font-size: 1rem;
+  font-size: .90rem;
   color: black;
 }
 /*should set this to take up 1 fraction of 3 of the container */
@@ -101,15 +112,15 @@ img.compact {
   background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
   flex-grow: 1;
   display: flex;
-  justify-content: center;
-  padding: 2rem;
+  justify-content: space-evenly;
+  padding: 2em;
 }
 
 .last-art-wrapper-1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 2em;
+  padding:  2em 6em 2em 0;
 }
 
 .funnyline a {
@@ -119,6 +130,7 @@ img.compact {
   font-weight: 600;
   padding: .3em;
   color: black;
+  margin-right: 4em;
 }
 
 img.article-image {
@@ -175,10 +187,10 @@ a {
 
 .title-10 {
   display: flex;
+  
   text-align: right;
   color: #000;
   font-weight: 600;
-  padding-left:1rem;
   font-family: "Helvetica", "Arial", "Arial Narrow", Arial, sans-serif;
 }
 
