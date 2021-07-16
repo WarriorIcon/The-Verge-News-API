@@ -30,25 +30,30 @@ body {
   max-width: 1300px;
   background-color: white;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: sapce-between;
+  padding: 2em 5em;
 }
 
 .compact-container {
   display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin: 1em auto;
+  flex-direction: column;  
 }
 
+.featured-video-headline {
+  color: black;
+  display: flex;
+  align-self: center;
+}
 .video-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  
+  border: 1px solid black;  
 }
 
 .compact-img {
   width: 25%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .compact-body {
@@ -73,9 +78,7 @@ body {
   font-family: "Helvetica", "Arial", "Arial Narrow", Arial, sans-serif;
 }
 
-img.compact {
-  display: inline-block;
-  object-fit: cover;
+.video-img {
   max-width: 100%;
   max-height: 100%;
 }

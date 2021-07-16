@@ -144,13 +144,13 @@
   <% } %> 
 <div class="white-area-container">
   <div class="compact-container">
-    <% for (let [i, article] of articleData.entries()) {%>
+    <%for (let [i, article] of articleData.entries()) {%>
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
     <div class="compact-body">
       <img class="compact-img" src="<%=articleData[i].urlToImage%>" alt="">
       <div class="compact-wrapper">
         <p><a class="title-compact" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></p>
-        <% if (articleData[i].author.indexOf(',') < 1) { %>
+        <%if (articleData[i].author.indexOf(',') < 1) { %>
           <p> <span class="by-compact">By</span> <a class="author-compact" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a></p>
           <% } else { %>
             <div class="compact-wrapper">
@@ -158,14 +158,21 @@
             </div>
             <% } %>  
       </div>
-    </div>
-    
-    
+    </div>    
     <%}%>
   </div>
-  <div class="video-container">
-    <p>happy days</p>
-  </div>
+  <section class="video-container">
+    <h4 class="featured-video-headline">FEATURED VIDEOS</h4>
+    <!-- for this loop, I only need the first 3 articles. How can I loop up to the first 3 entries only? -->
+    <%for (let [i, article] of articleData.entries()) {%>
+      <% if (i >= 7) { %>
+        <div class="video-box">
+          <img class="video-img" src="<%=articleData[i].urlToImage%>" alt="">
+          <p><a class="title-video" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></p>
+        </div>
+      <% } %> 
+    <%}%>
+  </section>
 </div>
 
 
