@@ -119,14 +119,24 @@
       <div class="headline-box">
         <img class="article-image" src="<%=articleData[i].urlToImage%>" alt="">
         <h3 class="title"><a href="<%=articleData[i].url %> "><%=articleData[i].title.toUpperCase()%></a></h3>
-        <h3> <span class="by">BY</span> <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
+        <!-- Very rarely an aticle has multiple authors. This band-aid code prevents messing up the format in edge cases. -->
+          <% if (articleData[i].author.indexOf(',') < 1) { %>
+            <h3> <span class="by">BY</span>  
+            <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
+          <% } else { %>
+            <h3><span class="by">BY</span> <a class="author" href="#">THE VERGE STAFF</a></h3>
+          <% } %> 
       </div>
         <%} else { %>
         <div class="last-article-container">
           <div class="last-art-wrapper-1">
             <h3> <a class="title-10" href="<%=articleData[i].url %> "><%=articleData[i].title%></a> </h3>
-            <h3> <span class="by">BY</span> <a class="author-last" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
-        </div>
+            <% if (articleData[i].author.indexOf(',') < 1) { %>
+            <h3> <span class="by-last">BY</span> <a class="author-last" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
+            <% } else { %>
+              <h3><span class="by-last">BY</span> <a class="author-last" href="#">THE VERGE STAFF</a></h3>
+            <% } %> 
+          </div>
          <p class="funnyline"><a href="#">A FUNNY ARTICLE-RELATED TAGLINE COULD GO HERE!</a></p>       
         </div>
       </div>
@@ -137,9 +147,13 @@
     <% for (let [i, article] of articleData.entries()) {%>
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
     <div class="compact-body">
-      <img class="compact" src="<%=articleData[i].urlToImage%>" alt="">
+      <img class="compact-img" src="<%=articleData[i].urlToImage%>" alt="">
       <h3><a class="title-compact" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></h3>
+      <% if (articleData[i].author.indexOf(',') < 1) { %>
       <h3> <span class="by-compact">By</span> <a class="author-compact" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a></h3>
+      <% } else { %>
+        <h3><span class="by-compact">BY</span> <a class="author-compact" href="#">THE VERGE STAFF</a></h3>
+        <% } %>
       <p>happy days</p>      
     </div>
     <%}%>
