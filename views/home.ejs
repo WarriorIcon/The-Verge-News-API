@@ -117,9 +117,9 @@
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
       <%if (i < 9) { %> 
       <div class="headline-box">
-        <img class="article-image" src="<%=articleData[i].urlToImage%>" alt="">
+        <a href="<%=articleData[i].url %>"><img class="article-image" src="<%=articleData[i].urlToImage%>" alt="article-thumbnail"></a>
         <h3 class="title"><a href="<%=articleData[i].url %> "><%=articleData[i].title.toUpperCase()%></a></h3>
-        <!-- Very rarely an aticle has multiple authors. This band-aid code prevents messing up the format in edge cases. -->
+        <!-- Very rarely an aticle has multiple authors. This band-aid code prevents messing up the format in edge cases.Note to self: This can also be done with .includes method -->
           <% if (articleData[i].author.indexOf(',') < 1) { %>
             <h3> <span class="by">BY</span>  
             <a class="author" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author.toUpperCase()}`%></a></h3>
@@ -167,7 +167,13 @@
     <%for (let [i, article] of articleData.entries()) {%>
       <% if (i >= 7) { %>
         <div class="video-box">
-          <img class="video-img" src="<%=articleData[i].urlToImage%>" alt="">
+          <div class="img-and-playbutton-svg-container">
+            <img class="video-img" src="<%=articleData[i].urlToImage%>" alt="video-thumbnail">
+            <div class="playbutton-svg">
+              <a href="google.com"><svg viewBox="528.9 235.2 309.3 328.8" class="playbutton-svg"><title>Play</title>
+                <path fill="#e2127A" d="M531.7 563.5c-1.7-1.1-2.8-3.3-2.8-5.5V242c0-2.2 1.1-4.4 2.8-5.5 2.2-1.7 4.4-1.7 6.6-.6l296.6 157.7c2.2 1.1 3.3 3.3 3.3 6.1s-1.7 5-3.3 6.1L537.7 563.5c-1.1.6-1.7.6-2.8.6-1-.1-2.1-.1-3.2-.6z"></path></svg></a>
+            </div>
+          </div>
           <p><a class="title-video" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></p>
         </div>
       <% } %> 
