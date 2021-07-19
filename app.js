@@ -12,9 +12,9 @@ const { DateTime } = require("luxon");
 const dt = DateTime.now()
 
 console.log(dt.toLocaleString(DateTime.DATETIME_HUGE))
-console.log(DateTime.fromISO('2021-07-18T13:00:00Z').toFormat('yyyy LLL dd'))
+console.log(DateTime.fromISO('2021-07-18T13:00:00Z').toFormat('ffff'))
 
-
+app.locals.dateTime = { DateTime }
 app.locals.moment = moment; // this makes moment available as a variable in every EJS page
 app.locals.date = date;
 //set the directory for all templating engine files (ejs)
