@@ -72,22 +72,20 @@ body {
 
 .img-and-playbutton-svg-container {
   position: relative;
-  background-color: green; 
+  background-color: green;
 }
 
-
-
 .playbutton-svg-container {   
-  box-sizing: border-box;
   position: absolute;
   top: 50%;
   left: 50%;
+  /* I don't like to set pixels instead of a % but this svg wasn't cooperating at all. */
+  min-width: 50px;
+  min-height:50px;
   transform: translate(-50%,-50%);
-  min-height: 100px;
   background-color: white;
-  border-radius: 1000px;
+  border-radius: 50%;
   padding: 1em;
-  border: 2px solid red;
 }
 
 .playbutton-svg-container:hover {
@@ -99,10 +97,7 @@ svg.playbutton-svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  max-width: 50%;
-  max-height: 50%;
-  border-radius: 0%;
-  
+  max-width: 40%; 
   fill:#e2127A;
 }
 
