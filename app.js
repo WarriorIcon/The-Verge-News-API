@@ -6,14 +6,13 @@ const app = express();
 const apiKey = process.env.API_KEY;
 const moment = require('moment-timezone');
 const date = "dddd, MMMM D, YYYY"; // this is just an example of storing a date format once so you can change it in one place and have it propagate
-const tz = moment.tz.guess();
+// const tz = moment.tz.guess();
+/* Trying Luxon instead of Moment.js */
 const { DateTime } = require("luxon");
 const dt = DateTime.now()
 
-console.log(tz)
-console.log(moment.tz.zone(`${tz}`).abbr(1388563200000)); // PDT
-console.log(moment.tz([2012, 5], 'Asia/Bangkok').format('z'));    // PST
 console.log(dt.toLocaleString(DateTime.DATETIME_HUGE))
+console.log(DateTime.fromISO('2021-07-18T13:00:00Z').toFormat('yyyy LLL dd'))
 
 
 app.locals.moment = moment; // this makes moment available as a variable in every EJS page

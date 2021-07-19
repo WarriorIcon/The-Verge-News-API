@@ -125,11 +125,30 @@ svg.playbutton-svg {
   margin-bottom: .5em;  
 }
 
+.by-compact {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 1rem;
+  font-size: .90rem;
+  color: #6A6A6A
+}
+
 .author-compact {
   font-size: .90rem;
   font-weight: 300;
   font-family: "Helvetica", "Arial Narrow", Arial, sans-serif;
   color: #e2127A;
+}
+
+.article-date-time {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .90rem;
+  color: #6A6A6A
+}
+
+.by-line-pipe {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6A6A6A;
+  margin: 0 .5em;
 }
 
 .title-compact {
@@ -151,12 +170,6 @@ p {
   flex-direction: column;
 }
 
-.by-compact {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 1rem;
-  font-size: .90rem;
-  color: black;
-}
 
 /* .flex-column {
   flex-grow: 1;
