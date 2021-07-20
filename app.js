@@ -51,7 +51,7 @@ app.get('/', (req, res) => {
 // const navbarStyle = document.getElementsByClassName("nav-link dropdown-toggle") 
 // // navbarStyle.append("style='color: #FFF'")
 
-const port = 3000
+const port = process.env.PORT || 3000
 app.listen(port, () => {
   console.log(`serving on port ${port}!`)
 })

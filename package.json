@@ -1,10 +1,11 @@
 {
-  "name": "The_Verge_API_Site",
+  "name": "the_verge_api_site",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
