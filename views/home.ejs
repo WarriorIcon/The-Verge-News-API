@@ -147,17 +147,20 @@
     <%for (let [i, article] of articleData.entries()) {%>
       <% let authorURL = "https://www.theverge.com/authors/" + `${articleData[i].author}` %>
     <div class="compact-body">
-      <img class="compact-img" src="<%=articleData[i].urlToImage%>" alt="">
-      <div class="compact-wrapper">
-        <p><a class="title-compact" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></p>
-        <%if (articleData[i].author.indexOf(',') < 1) { %>
-          <p> <span class="by-compact">By</span> <a class="author-compact" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a><span class="by-line-pipe">|</span><span class="article-date-time"> <%=luxon.DateTime.fromISO(`${articleData[i].publishedAt}`).toFormat('ffff') %>  </span> </p>
-          <% } else { %>
-            <div class="compact-wrapper">
-              <p><span class="by-compact">By</span> <a class="author-compact" href="#">THE VERGE STAFF</a></p>
-            </div>
-            <% } %>  
+      <div class="compact-col">
+        <img class="compact-img" src="<%=articleData[i].urlToImage%>" alt="">
       </div>
+        <div class="compact-wrapper">
+          <p><a class="title-compact" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></p>
+          <%if (articleData[i].author.indexOf(',') < 1) { %>
+            <p> <span class="by-compact">By</span> <a class="author-compact" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a><span class="by-line-pipe">|</span><span class="article-date-time"> <%=luxon.DateTime.fromISO(`${articleData[i].publishedAt}`).toFormat('ffff') %>  </span> </p>
+            <% } else { %>
+              <div class="compact-wrapper">
+                <p><span class="by-compact">By</span> <a class="author-compact" href="#">THE VERGE STAFF</a></p>
+              </div>
+              <% } %>
+        </div>
+      
     </div>    
     <%}%>
   </div>

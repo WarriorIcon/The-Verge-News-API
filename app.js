@@ -14,7 +14,6 @@ app.locals.luxon = require('luxon')
 
 // console.log(dt.toLocaleString(DateTime.DATETIME_HUGE))
 console.log(app.locals.luxon.DateTime.fromISO('2021-07-18T13:00:00Z').toFormat('ffff'))
-console.log(app.locals.luxon.DateTime.fromISO('2021-07-18T13:00:00Z').toFormat('ffff'))
 
 
 // app.locals.dateTime = { DateTime }
