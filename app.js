@@ -8,13 +8,16 @@ const moment = require('moment-timezone');
 const date = "dddd, MMMM D, YYYY"; // this is just an example of storing a date format once so you can change it in one place and have it propagate
 // const tz = moment.tz.guess();
 /* Trying Luxon instead of Moment.js */
-const { DateTime } = require("luxon");
-const dt = DateTime.now()
+// const { DateTime } = require("luxon");
+// const dt = DateTime.now()
+app.locals.luxon = require('luxon')
 
-console.log(dt.toLocaleString(DateTime.DATETIME_HUGE))
-console.log(DateTime.fromISO('2021-07-18T13:00:00Z').toFormat('ffff'))
+// console.log(dt.toLocaleString(DateTime.DATETIME_HUGE))
+console.log(app.locals.luxon.DateTime.fromISO('2021-07-18T13:00:00Z').toFormat('ffff'))
+console.log(app.locals.luxon.DateTime.fromISO('2021-07-18T13:00:00Z').toFormat('ffff'))
 
-app.locals.dateTime = { DateTime }
+
+// app.locals.dateTime = { DateTime }
 app.locals.moment = moment; // this makes moment available as a variable in every EJS page
 app.locals.date = date;
 //set the directory for all templating engine files (ejs)

@@ -151,7 +151,7 @@
       <div class="compact-wrapper">
         <p><a class="title-compact" href="<%=articleData[i].url %> "><%=articleData[i].title%></a></p>
         <%if (articleData[i].author.indexOf(',') < 1) { %>
-          <p> <span class="by-compact">By</span> <a class="author-compact" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a><span class="by-line-pipe">|</span><span class="article-date-time">   <%= `${articleData[i].publishedAt}` %></span> </p>
+          <p> <span class="by-compact">By</span> <a class="author-compact" href="<%=authorURL.replace(" ", "-")%>"><%=`${articleData[i].author}`%></a><span class="by-line-pipe">|</span><span class="article-date-time"> <%=luxon.DateTime.fromISO(`${articleData[i].publishedAt}`).toFormat('ffff') %>  </span> </p>
           <% } else { %>
             <div class="compact-wrapper">
               <p><span class="by-compact">By</span> <a class="author-compact" href="#">THE VERGE STAFF</a></p>
