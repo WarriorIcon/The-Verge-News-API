@@ -173,7 +173,7 @@
     <h4 class="featured-video-headline">FEATURED VIDEOS</h4>
     <!-- for this loop, I only need the first 3 articles. How can I loop up to the first 3 entries only? -->
     <%for (let [i, article] of articleData.entries()) {%>
-      <% if (i >= 7) { %>
+      <% if (i <= 7) { %>
         <div class="video-box">
           <div class="img-and-playbutton-svg-container">
             <div class="video-img-container"><img class="video-img" src="<%=articleData[i].urlToImage%>" alt="video-thumbnail">
